@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tasters_platform/static/css/main.4d88498c.css",
+    "main.js": "/tasters_platform/static/js/main.fedc312a.js",
+    "index.html": "/tasters_platform/index.html",
+    "main.4d88498c.css.map": "/tasters_platform/static/css/main.4d88498c.css.map",
+    "main.fedc312a.js.map": "/tasters_platform/static/js/main.fedc312a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d88498c.css",
+    "static/js/main.fedc312a.js"
+  ]
+}
