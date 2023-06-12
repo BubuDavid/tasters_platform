@@ -1,0 +1,20 @@
+.FormButton {
+	display: flex;
+	flex-direction: row;
+	background-color: #22A699;
+	width: fit-content;
+	transition: all 350ms ease-in-out;
+	margin: 1rem;
+	padding: 1rem;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+.FormButton {
+	text-decoration: none;
+	color: white;
+}
+
+.FormButton:hover {
+	transform: scale(1.05);
+}
