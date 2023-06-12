@@ -1,0 +1,25 @@
+.page__data {
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+}
+
+.page__forms {
+	display: flex;
+}
+
+.page__user__button {
+	cursor: pointer;
+}
+
+.forms__button {
+	margin: 1rem 0 ;
+}
+
+.forms__button a {
+	text-decoration: none;
+	color: white;
+	background-color: pink;
+	padding: 0.3rem 1rem;
+	border-radius: 5px;
+}

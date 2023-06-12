@@ -9,7 +9,7 @@ app = config_app()
 @app.get('/user_data')
 async def user_data(user_id: str = None, page: str = None):
 	if not user_id:
-		return []
+		return {}
 	if not page:
 		page = 'users'
 	
@@ -19,7 +19,7 @@ async def user_data(user_id: str = None, page: str = None):
 		raise Exception(e)
 
 	if page not in mapping_table:
-		return []
+		return {}
 	
 	mapping = mapping_table[page]
 
@@ -27,6 +27,7 @@ async def user_data(user_id: str = None, page: str = None):
 		user_data = get_airtable_table(page, user_id)
 	except Exception as e:
 		raise Exception(e)
+	
 	
 	fields_map = mapping['fields_map']
 	response = {'current_page': page, 'front_name': mapping['front_name'], 'fields_map': []}

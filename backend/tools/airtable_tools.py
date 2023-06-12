@@ -42,10 +42,9 @@ def get_mapping_table():
 
 def get_airtable_table(table_name, user_id):
 	airtable_variables = airtable_variables_loader()
-	url = f"https://api.airtable.com/v0/{airtable_variables['base_id']}/{table_name}?filterByFormula=%7Buser_id%7D%3D%22{user_id}%22"
+	url = f"https://api.airtable.com/v0/{airtable_variables['base_id']}/{table_name}?filterByFormula=%7Buser_id%7D+%3D+%22{user_id}%22"
 	headers = {'Authorization': f"Bearer {airtable_variables['token']}"}
 
-	
 	res = req.get(url=url, headers=headers)
 	if res.status_code not in range(200, 300):
 		raise Exception(f"Something went wrong with mapping table, {res.status_code}")
@@ -53,7 +52,6 @@ def get_airtable_table(table_name, user_id):
 
 	records = res.json()['records']
 
-	
 	return records[0]['fields'] if len(records) != 0 else []
 
 
